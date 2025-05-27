@@ -11,21 +11,29 @@
       background: #f9f9f9;
       color: #333;
     }
-    header {
-      background: #0a0f2c;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      text-align: center;
-    }
-    .logo {
-  width: 50px;
-  height: auto;
+  header {
+  background: #0a0f2c;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+.logo {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
     nav {
       background: #1a1f3d;
       display: flex;
@@ -85,10 +93,12 @@
 </head>
 <body>
 
-  <header>
-    <img src="Visionsystem.png" alt="Guardian Vision Systems Logo" style="logo">
-    <p>Reliable Security Camera Installation for Homes </p>
-  </header>
+ <header>
+  <img src="Visionsystem.png" alt="Guardian Vision Systems Logo" class="logo">
+  <div>
+    <p style="margin: 0; font-size: 1rem;">Reliable Security Camera Installation for Homes</p>
+  </div>
+</header>
 
   <nav>
     <a href="#services">Services</a>
