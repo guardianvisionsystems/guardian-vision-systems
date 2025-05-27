@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Vision Systems</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #0a0f2c;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #1a1f3d;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #2e3562;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services, .testimonials {
+      display: grid;
+      gap: 1rem;
+    }
+    .service-card, .testimonial-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    form {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #0a0f2c;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: #1a1f3d;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guardian Vision Systems</h1>
+    <p>Reliable Security Camera Installation for Homes </p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Residential Camera Installation</h3>
+        <p>Keep your home safe with high-definition indoor and outdoor camera systems with remote access.</p>
+      </div>
+     
+      </div>
+      <div class="service-card">
+        <h3>Maintenance & Support</h3>
+        <p>Regular checkups and fast service for existing systems, even if we didn’t install them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Guardian Vision</h2>
+    <p>We are a local business dedicated to helping homeowners and businesses protect what matters most. With professional-grade installations and excellent customer service, we make security simple and affordable.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>"Guardian Vision installed 6 cameras around our shop — they were quick, professional, and even set up remote viewing for my phone. Highly recommend!"</p>
+        <strong>– Melissa, Small Business Owner</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"I sleep better knowing I can check on my home from anywhere. They explained everything and made it super easy."</p>
+        <strong>– James, Homeowner</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get a Free Quote!</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Guardian Vision Systems · All rights reserved</p>
+  </footer>
+
+</body>
+</html>
