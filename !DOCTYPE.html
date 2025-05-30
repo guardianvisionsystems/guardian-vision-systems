@@ -172,6 +172,19 @@ section:target {
   <footer>
     <p>© 2025 Guardian Vision Systems · All rights reserved</p>
   </footer>
+<script>
+  const links = document.querySelectorAll("nav a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      setTimeout(() => {
+        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active-section"));
+        const targetId = link.getAttribute("href").substring(1);
+        const target = document.getElementById(targetId);
+        if (target) target.classList.add("active-section");
+      }, 300); // Wait for scroll
+    });
+  });
+</script>
 
 </body>
 </html>
