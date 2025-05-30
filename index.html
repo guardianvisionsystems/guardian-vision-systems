@@ -157,6 +157,23 @@ section:target {
   <footer>
     <p>© 2025 Guardian Vision Systems · All rights reserved</p>
   </footer>
+<script>
+  const sections = document.querySelectorAll("section");
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    section.classList.add("hidden");
+    observer.observe(section);
+  });
+</script>
 </body>
 </html>
