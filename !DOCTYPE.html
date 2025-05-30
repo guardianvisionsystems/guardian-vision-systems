@@ -76,6 +76,28 @@
       text-align: center;
       padding: 1rem;
     }
+    section:hover {
+  background: #eef1f8;
+  transition: background 0.3s ease;
+}
+
+section:target {
+  outline: 3px solid #0a0f2c;
+  animation: pulse 0.8s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
   </style>
 </head>
 <body>
