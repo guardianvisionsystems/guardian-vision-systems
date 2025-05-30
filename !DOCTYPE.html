@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guardian Vision Systems</title>
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-
-  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -83,18 +77,14 @@
       padding: 1rem;
     }
     section:hover {
-  background: #dde3f1;
-  transition: background 0.3s ease, transform 0.3s ease;
-  transform: translateY(-5px);
+  background: #eef1f8;
+  transition: background 0.3s ease;
 }
-
 
 section:target {
-  border: 2px solid #0a0f2c;
-  background: #cfd8f0;
-  animation: pulse 0.4s ease;
+  outline: 3px solid #0a0f2c;
+  animation: pulse 0.8s ease;
 }
-
 
 @keyframes pulse {
   0% {
@@ -173,18 +163,24 @@ section:target {
     <p>© 2025 Guardian Vision Systems · All rights reserved</p>
   </footer>
 <script>
-  const links = document.querySelectorAll("nav a");
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      setTimeout(() => {
-        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active-section"));
-        const targetId = link.getAttribute("href").substring(1);
-        const target = document.getElementById(targetId);
-        if (target) target.classList.add("active-section");
-      }, 300); // Wait for scroll
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    section.classList.add("hidden");
+    observer.observe(section);
   });
 </script>
 
 </body>
 </html>
+
