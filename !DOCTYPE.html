@@ -83,14 +83,18 @@
       padding: 1rem;
     }
     section:hover {
-  background: #eef1f8;
-  transition: background 0.3s ease;
+  background: #dde3f1;
+  transition: background 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
 }
 
+
 section:target {
-  outline: 3px solid #0a0f2c;
-  animation: pulse 0.8s ease;
+  border: 2px solid #0a0f2c;
+  background: #cfd8f0;
+  animation: pulse 0.4s ease;
 }
+
 
 @keyframes pulse {
   0% {
